@@ -1,12 +1,7 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "tableau_dynamique.h"
 
 
-struct tab_dyn { 
-    int * tab; 
-    int length;
-    int capacity;
-};
+
 
 struct tab_dyn* create_tab_dyn(int base_capactiy){
     int *tab = malloc(sizeof(int)*base_capactiy);
@@ -62,13 +57,3 @@ void free_tab(struct tab_dyn* td){
 
  
 
-int main(int argc, char** argv){
-
-    struct tab_dyn* tableau1 = create_tab_dyn(2);
-    insert_tab_dyn(tableau1, 1);
-    print_tab_dyn(tableau1);
-    insert_tab_dyn(tableau1, 2);
-    insert_tab_dyn(tableau1, 3);
-    print_tab_dyn(tableau1);
-
-}
